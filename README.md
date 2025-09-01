@@ -74,6 +74,7 @@ This is a warning only  the pipeline has been tested and runs successfully. Outp
 
 ### Build Docker image (if needed):
 
-```bash
+
 docker build -t fish-imagedetector .
 
+.github will tigger github action one pushed in main branch

@@ -11,8 +11,10 @@ pip install -r requirements.txt
 while using docker I had to take detectron2==0.6 out however in the docker I have wrote to pip install it should work however if it doesn’t need to pip install detectron2==0.6.
 
 now pull the github repository file : https://github.com/Samyak44/ImageRecognition_pipeline
+
 Important: Use numpy<2.0.0 to avoid compatibility issues with PyTorch.
 Basic Execution
+
 # Run with default settings
 python app.py
 
@@ -35,8 +37,11 @@ fish-detection-demo/
 │   ├── model.pth
 │   └── class_mapping.json
 └── output/              # Results will appear here
+
 Running the pipeline: 
 docker run -v $(pwd)/images:/app/images \ -v $(pwd)/models:/app/models \ -v $(pwd)/output:/app/output \ mavrick444/fish-imagedetection:latest \ python app.py \ --images_dir /app/images \ --model_path /app/models/model.pth \ --class_mapping_path /app/models/class_mapping.json \ --output_dir /app/output
+
+
 When you run the image : 
 docker run image-detection python app.py \ --images_dir /path/to/images \ --model_path /path/to/model \ --class_mapping_path /path/to/class_mapping \ --output_dir /path/to/output
  
